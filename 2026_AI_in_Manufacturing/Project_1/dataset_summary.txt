@@ -1,0 +1,44 @@
+Project 1 Dataset Summary
+=========================
+
+Dataset file:
+data/project1_process_parameters_fatigue_class.csv
+
+What is in this dataset?
+This dataset contains process information for printed fatigue specimens. Each row represents one specimen. The goal is to use the printing process parameters to predict whether the specimen belongs to the short-life or long-life fatigue group.
+
+Dataset size:
+- Number of specimens: 60
+- Number of columns: 7
+
+Columns included:
+- part_id
+- power
+- scan_speed
+- hatch_spacing
+- layer_thickness
+- ved
+- fatigue_life_class
+
+Input features:
+- power: laser power used during printing
+- scan_speed: speed of the laser during scanning
+- hatch_spacing: distance between neighboring scan lines
+- layer_thickness: thickness of each printed layer
+- ved: volumetric energy density
+
+Prediction target:
+- fatigue_life_class
+
+Class labels:
+- short_life: specimen belongs to the shorter fatigue-life group
+- long_life: specimen belongs to the longer fatigue-life group
+
+Class balance:
+fatigue_life_class
+short_life    30
+long_life     30
+Name: count, dtype: int64
+
+Note:
+This is a beginner machine learning dataset. It is intentionally simple. You may find that the models do not perform perfectly, and that is okay. One of the main lessons of this project is that model performance depends on the quality and variation of the input features, not only on the choice of machine learning algorithm.
